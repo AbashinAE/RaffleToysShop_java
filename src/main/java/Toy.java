@@ -1,20 +1,14 @@
 public class Toy {
-    private String name; // название
-    private int count; // количество
-    private Integer weight; // вес
+    private String name;
 
-    public Toy(String name, int count, Integer weight){
+    private int count;
+
+    private Integer weight;
+
+    public Toy(String name, int count, int weight) {
         this.name = name;
         this.count = count;
         this.weight = weight;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getCount() {
@@ -25,20 +19,28 @@ public class Toy {
         this.count = count;
     }
 
-    public Integer getWeight() {
-        return weight;
+    public String getName() {
+        return name;
     }
 
-    public void setWeight(Integer weight) {
-        this.weight = weight;
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
     public String toString() {
-        return "Toy: name=" + name + ", count=" + count+ ", weight=" + defaultWeight;
+        return "Toy: name = " + name + ", count = " + count + ", weight = " + weight;
     }
+
+    public Integer getDefaultWeight() {
+        return weight;
+    }
+
     public Toy reduceWeight() {
         weight--;
         return this;
+    }
+    public void setDefaultWeight(Integer defaultWeight) {
+        this.weight = defaultWeight;
     }
 }

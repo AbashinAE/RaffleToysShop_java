@@ -6,7 +6,9 @@ public class Main {
         toy.addToy("Юла",15, 25);
         toy.addToy("Мяч",15, 25);
         System.out.println(toy.getInfo());
-        toy.changeWeight(3,0);
+
+        toy.changeWeight(3, 0);
         System.out.println(toy.getInfo());
+
     }
 }
